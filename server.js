@@ -84,7 +84,7 @@ const io = new Server(server, {
 });
 // --- START: Syrja ID Directory Service (v2) ---
 
-app.use(express.json()); // Middleware to parse JSON bodies
+app.use(express.json({ limit: '2mb' })); // Middleware to parse JSON bodies
 app.use(cors());       // CORS Middleware
 
 // Initialize node-persist storage
